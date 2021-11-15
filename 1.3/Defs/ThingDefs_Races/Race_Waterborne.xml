@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>NH_Waterborne</defName>
+		<label>waterborne</label>
+		<alienRace>
+			<generalSettings>
+				<alienPartGenerator>
+					<aliencrowntypes Inherit="False">
+						<li>Average</li>
+					</aliencrowntypes>
+					<alienbodytypes Inherit="False">
+						<li>Female</li>
+						<li>Male</li>
+					</alienbodytypes>
+				</alienPartGenerator>
+			</generalSettings>
+			<styleSettings>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+			<graphicPaths Inherit="False">
+				<li>
+					<head>Waterborne/Head/</head>
+					<body>Waterborne/Body/</body>
+				</li>
+			</graphicPaths>
+		</alienRace>
+		<race>
+			<body>NH_Waterborne</body>
+		</race>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

@@ -2,13 +2,13 @@
 <Defs>
 
   <StyleItemCategoryDef>
-    <defName>NH_Packkin</defName>
-    <label>Packkin</label>
+    <defName>NH_Waterborne</defName>
+    <label>Waterborne</label>
   </StyleItemCategoryDef>
   
   <CultureDef>
-    <defName>NH_Packkin_Culture</defName>
-    <label>packin</label>
+    <defName>NH_Waterborne_Culture</defName>
+    <label>waterborne</label>
     <description>An ancient culture common among rimworld tribes.</description>
     <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
     <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoCorunan</ideoNameMaker>
@@ -32,8 +32,18 @@
     </thingStyleCategories>
     <styleItemTags>
       <li>
-        <tag>NH_Packkin_Beard</tag>
-        <baseWeight>0.3</baseWeight>
+        <tag>NoHair</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
         <weightFactor>1</weightFactor>
       </li>
     </styleItemTags>
