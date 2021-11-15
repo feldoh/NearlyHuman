@@ -1,21 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<FactionDef ParentName="FactionBase" Name="GenericFactionBase" Abstract="True">
-		<pawnSingular>YF_Generic</pawnSingular>
-		<pawnsPlural>humans</pawnsPlural>
-		<categoryTag>Generic</categoryTag>
+	<FactionDef ParentName="FactionBase" Name="NH_PackkinFactionBase" Abstract="True">
+		<pawnSingular>NH_Packkin</pawnSingular>
+		<pawnsPlural>packkin</pawnsPlural>
+		<categoryTag>NH_Packkin</categoryTag>
 		<listOrderPriority>30</listOrderPriority>
 		<settlementGenerationWeight>1</settlementGenerationWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
-		<leaderTitle>generic leader</leaderTitle>
+		<leaderTitle>Packkin leader</leaderTitle>
 		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
 		<techLevel>Industrial</techLevel>
-		<settlementNameMaker>YF_NamerFactionGenericSettlement</settlementNameMaker>
-		<allowedCultures><li>Rustican</li></allowedCultures>
+		<settlementNameMaker>NH_NamerFactionPackkinSettlement</settlementNameMaker>
+		<allowedCultures><li>NH_Packkin_Culture</li></allowedCultures>
 		<disallowedMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
@@ -59,7 +59,7 @@
 			<li>Base_Outlander_Standard</li>
 		</baseTraderKinds>
 		<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
-		<raidLootMaker>YF_GenericRaidLootMaker</raidLootMaker>
+		<raidLootMaker>NH_PackkinRaidLootMaker</raidLootMaker>
 		<maxPawnCostPerTotalPointsCurve>
 			<points>
 				<li>(0,35)</li>
@@ -73,18 +73,18 @@
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<YF_CivilianOne>5</YF_CivilianOne>
-					<YF_CivilianTwo>5</YF_CivilianTwo>
-					<YF_CivilianThree>1.5</YF_CivilianThree>
-					<YF_CivilianFour>5</YF_CivilianFour>
-					<YF_CivilianFive>5</YF_CivilianFive>
-					<YF_CivilianSix>1.5</YF_CivilianSix>
+					<NH_Packkin_CivilianOne>5</NH_Packkin_CivilianOne>
+					<NH_Packkin_CivilianTwo>5</NH_Packkin_CivilianTwo>
+					<NH_Packkin_CivilianThree>1.5</NH_Packkin_CivilianThree>
+					<NH_Packkin_CivilianFour>5</NH_Packkin_CivilianFour>
+					<NH_Packkin_CivilianFive>5</NH_Packkin_CivilianFive>
+					<NH_Packkin_CivilianSix>1.5</NH_Packkin_CivilianSix>
 				</options>
 			</li>
 			<li>
 				<kindDef>Trader</kindDef>
 				<traders>
-					<YF_TraderOne>1</YF_TraderOne>
+					<NH_Packkin_TraderOne>1</NH_Packkin_TraderOne>
 				</traders>
 				<carriers>
 					<Muffalo>6</Muffalo>
@@ -93,37 +93,37 @@
 					<Elephant>1</Elephant>
 				</carriers>
 				<guards>
-					<YF_CivilianOne>5</YF_CivilianOne>
-					<YF_CivilianTwo>5</YF_CivilianTwo>
-					<YF_SoldierOne>5</YF_SoldierOne>
-					<YF_SoldierTwo>5</YF_SoldierTwo>
-					<YF_SoldierThree>1.5</YF_SoldierThree>
-					<YF_SoldierFour>1.5</YF_SoldierFour>
+					<NH_Packkin_CivilianOne>5</NH_Packkin_CivilianOne>
+					<NH_Packkin_CivilianTwo>5</NH_Packkin_CivilianTwo>
+					<NH_Packkin_SoldierOne>5</NH_Packkin_SoldierOne>
+					<NH_Packkin_SoldierTwo>5</NH_Packkin_SoldierTwo>
+					<NH_Packkin_SoldierThree>1.5</NH_Packkin_SoldierThree>
+					<NH_Packkin_SoldierFour>1.5</NH_Packkin_SoldierFour>
 				</guards>
 			</li>
 			<li>
 				<kindDef>Combat</kindDef>
 				<options>
-					<YF_SoldierOne>5</YF_SoldierOne>
-					<YF_SoldierTwo>5</YF_SoldierTwo>
-					<YF_SoldierThree>1.5</YF_SoldierThree>
-					<YF_SoldierFour>5</YF_SoldierFour>
-					<YF_SoldierFive>5</YF_SoldierFive>
-					<YF_SoldierSix>1.5</YF_SoldierSix>
-					<YF_FactionLeaderOne>1.5</YF_FactionLeaderOne>
+					<NH_Packkin_SoldierOne>5</NH_Packkin_SoldierOne>
+					<NH_Packkin_SoldierTwo>5</NH_Packkin_SoldierTwo>
+					<NH_Packkin_SoldierThree>1.5</NH_Packkin_SoldierThree>
+					<NH_Packkin_SoldierFour>5</NH_Packkin_SoldierFour>
+					<NH_Packkin_SoldierFive>5</NH_Packkin_SoldierFive>
+					<NH_Packkin_SoldierSix>1.5</NH_Packkin_SoldierSix>
+					<NH_Packkin_FactionLeaderOne>1.5</NH_Packkin_FactionLeaderOne>
 				</options>
 			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<YF_CivilianOne>5</YF_CivilianOne>
-					<YF_CivilianTwo>5</YF_CivilianTwo>
-					<YF_CivilianThree>1.5</YF_CivilianThree>
-					<YF_SoldierOne>5</YF_SoldierOne>
-					<YF_SoldierTwo>5</YF_SoldierTwo>
-					<YF_SoldierThree>1.5</YF_SoldierThree>
-					<YF_SoldierFour>1.5</YF_SoldierFour>
-					<YF_FactionLeaderOne>1.5</YF_FactionLeaderOne>
+					<NH_Packkin_CivilianOne>5</NH_Packkin_CivilianOne>
+					<NH_Packkin_CivilianTwo>5</NH_Packkin_CivilianTwo>
+					<NH_Packkin_CivilianThree>1.5</NH_Packkin_CivilianThree>
+					<NH_Packkin_SoldierOne>5</NH_Packkin_SoldierOne>
+					<NH_Packkin_SoldierTwo>5</NH_Packkin_SoldierTwo>
+					<NH_Packkin_SoldierThree>1.5</NH_Packkin_SoldierThree>
+					<NH_Packkin_SoldierFour>1.5</NH_Packkin_SoldierFour>
+					<NH_Packkin_FactionLeaderOne>1.5</NH_Packkin_FactionLeaderOne>
 				</options>
 			</li>
 		</pawnGroupMakers>
@@ -131,7 +131,7 @@
 	</FactionDef>
 
 	<ThingSetMakerDef>
-		<defName>YF_GenericRaidLootMaker</defName>
+		<defName>NH_PackkinRaidLootMaker</defName>
 		<root Class="ThingSetMaker_MarketValue">
 			<fixedParams>
 				<filter>
@@ -147,11 +147,11 @@
 		</root>
 	</ThingSetMakerDef>
 
-	<FactionDef ParentName="GenericFactionBase">
-		<defName>YF_GenericCivil</defName>
-		<label>Generic civil</label>
+	<FactionDef ParentName="NH_PackkinFactionBase">
+		<defName>NH_PackkinCivil</defName>
+		<label>Packkin civil</label>
 		<description>.</description>
-		<factionNameMaker>YF_NamerFactionGenericCivil</factionNameMaker>
+		<factionNameMaker>NH_NamerFactionPackkinCivil</factionNameMaker>
 		<colorSpectrum>
 			<li>(0.35, 0.30, 0.60)</li>
 			<li>(0.45, 0.40, 0.90)</li>
@@ -161,10 +161,10 @@
 		<configurationListOrderPriority>10</configurationListOrderPriority>
 	</FactionDef>
 
-	<FactionDef ParentName="GenericFactionBase">
-		<defName>YF_GenericHostile</defName>
-		<label>Generic hostile</label>
-		<factionNameMaker>YF_NamerFactionGenericHostile</factionNameMaker>
+	<FactionDef ParentName="NH_PackkinFactionBase">
+		<defName>NH_PackkinHostile</defName>
+		<label>Packkin hostile</label>
+		<factionNameMaker>NH_NamerFactionPackkinHostile</factionNameMaker>
 		<description>.</description>
 		<colorSpectrum>
 			<li>(0, 0.4, 0.94)</li>
