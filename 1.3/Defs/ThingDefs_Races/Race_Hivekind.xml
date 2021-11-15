@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>NH_Hivekind</defName>
+		<label>hivekind</label>
+		<statBases>
+			<ShootingAccuracyPawn>10</ShootingAccuracyPawn>
+			<MoveSpeed>6.0</MoveSpeed>
+		</statBases>
+		<alienRace>
+			<generalSettings>
+				<alienPartGenerator>
+					<aliencrowntypes Inherit="False">
+						<li>Average</li>
+					</aliencrowntypes>
+					<alienbodytypes Inherit="False">
+						<li>Thin</li>
+					</alienbodytypes>
+				</alienPartGenerator>
+			</generalSettings>
+			<styleSettings>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+			<graphicPaths Inherit="False">
+				<li>
+					<head>Hivekind/Head/</head>
+					<body>Hivekind/Body/</body>
+				</li>
+			</graphicPaths>
+		</alienRace>
+		<race>
+			<body>NH_Hivekind</body>
+		</race>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

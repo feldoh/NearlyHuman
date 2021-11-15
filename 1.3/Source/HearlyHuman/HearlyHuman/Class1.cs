@@ -172,10 +172,11 @@ namespace HearlyHuman
             var found = false;
             for (int i = 0; i < codes.Count; i++)
             {
-                if (!found && codes[i].opcode == OpCodes.Ldloc_S && codes[i].operand is LocalBuilder lb && lb.LocalIndex == 16 && codes[i + 1].opcode == OpCodes.Brfalse_S)
+                yield return codes[i];
+                if (!found && codes[i].opcode == OpCodes.Stloc_S && codes[i].operand is LocalBuilder lb && lb.LocalIndex == 53)
                 {
                     found = true;
-                    yield return new CodeInstruction(OpCodes.Ldloc_0).MoveLabelsFrom(codes[i]);
+                    yield return new CodeInstruction(OpCodes.Ldloc_0);
                     yield return new CodeInstruction(OpCodes.Ldloc_S, 12);
                     yield return new CodeInstruction(OpCodes.Ldloc_S, 43);
                     yield return new CodeInstruction(OpCodes.Ldelem_Ref);
@@ -183,7 +184,10 @@ namespace HearlyHuman
                     yield return new CodeInstruction(OpCodes.Call, typeof(PathFinder_FindPath_Patch).GetMethod(nameof(PathFinder_FindPath_Patch.PathCostChangeIfNeeded)));
                     yield return new CodeInstruction(OpCodes.Stloc_S, 46);
                 }
-                yield return codes[i];
+            }
+            if (!found)
+            {
+                Log.Error("PathFinder.FindPath Transpiler failed. The code won't work.");
             }
         }
 
