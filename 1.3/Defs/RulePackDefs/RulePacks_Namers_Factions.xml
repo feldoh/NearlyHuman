@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <RulePackDef>
+    <defName>YF_NamerFactionGenericCivil</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Generic Civil</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>YF_NamerFactionGenericHostile</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Generic Hostile</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>YF_NamerFactionGenericSettlement</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Settlement</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+
+</Defs>

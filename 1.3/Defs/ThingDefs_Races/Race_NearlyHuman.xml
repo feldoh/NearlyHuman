@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>YF_NearlyHuman</defName>
+		<label>nearly human</label>
+		<alienRace>
+			<graphicPaths Inherit="False">
+				<li>
+					<head>NearlyHuman/Head/</head>
+					<body>NearlyHuman/Body/</body>
+				</li>
+			</graphicPaths>
+		</alienRace>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

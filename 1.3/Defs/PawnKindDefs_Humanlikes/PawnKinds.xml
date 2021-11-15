@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<PawnKindDef Name="GenericPawnKindBase" Abstract="True">
+		<race>YF_NearlyHuman</race>
+		<chemicalAddictionChance>0.05</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+	</PawnKindDef>
+
+	<PawnKindDef Name="GenericCivilianKindBase" ParentName="GenericPawnKindBase" Abstract="True">
+		<combatPower>45</combatPower>
+		<isFighter>false</isFighter>
+		<initialWillRange>0~1</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="GenericCombatKindBase" ParentName="GenericPawnKindBase" Abstract="True">
+		<combatPower>60</combatPower>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCivilianKindBase">
+		<defName>YF_CivilianOne</defName>
+		<label>generic civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCivilianKindBase">
+		<defName>YF_CivilianTwo</defName>
+		<label>generic civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCivilianKindBase">
+		<defName>YF_CivilianThree</defName>
+		<label>generic civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCivilianKindBase">
+		<defName>YF_CivilianFour</defName>
+		<label>generic civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCivilianKindBase">
+		<defName>YF_CivilianFive</defName>
+		<label>generic civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCivilianKindBase">
+		<defName>YF_CivilianSix</defName>
+		<label>generic civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCombatKindBase">
+		<defName>YF_SoldierOne</defName>
+		<label>generic soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCombatKindBase">
+		<defName>YF_SoldierTwo</defName>
+		<label>generic soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCombatKindBase">
+		<defName>YF_SoldierThree</defName>
+		<label>generic soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCombatKindBase">
+		<defName>YF_SoldierFour</defName>
+		<label>generic soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCombatKindBase">
+		<defName>YF_SoldierFive</defName>
+		<label>generic soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericCombatKindBase">
+		<defName>YF_SoldierSix</defName>
+		<label>generic soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GenericPawnKindBase">
+		<defName>YF_TraderOne</defName>
+		<label>town trader</label>
+		<trader>true</trader>
+		<combatPower>45</combatPower>
+		<isFighter>false</isFighter>
+		<itemQuality>Normal</itemQuality>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>12~20</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="GenericFactionLeader" ParentName="GenericPawnKindBase" Abstract="True">
+		<label>generic leader</label>
+		<labelPlural>generic leaders</labelPlural>
+		<combatPower>40</combatPower>
+		<factionLeader>true</factionLeader>
+		<minGenerationAge>30</minGenerationAge>
+		<isFighter>false</isFighter>
+		<itemQuality>Good</itemQuality>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="GenericFactionLeader">
+		<defName>YF_FactionLeaderOne</defName>
+	</PawnKindDef>
+
+</Defs>
