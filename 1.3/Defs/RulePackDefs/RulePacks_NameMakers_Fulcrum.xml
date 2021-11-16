@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NH_NameGeneratorFulcrum</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->TX-[numbers]</li>
+		<li>numbers->[Digit]</li>
+        <li>numbers->[Digit][Digit]</li>
+        <li>numbers->[Digit][Digit][Digit]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

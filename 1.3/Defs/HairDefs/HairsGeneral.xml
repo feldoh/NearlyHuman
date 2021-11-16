@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HairDef>
+    <defName>Fulcrum_HairAlienD_1</defName>
+    <label>Fulcrum hair</label>
+    <texPath>Fulcrum/Hair/HairAlienD_1</texPath>
+    <hairTags>
+      <li>Fulcrum_Hair</li>
+    </hairTags>
+  </HairDef>
+  
+  <HairDef>
+    <defName>Shinukos_MaleHair2</defName>
+    <label>Fulcrum hair 2</label>
+    <texPath>Fulcrum/Hair/HairAlienD_2</texPath>
+    <hairTags>
+      <li>Fulcrum_Hair</li>
+    </hairTags>
+  </HairDef>
+
+</Defs>

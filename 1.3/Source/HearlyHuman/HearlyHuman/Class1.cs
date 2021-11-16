@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using AlienRace;
+using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace HearlyHuman
 		public static ThingDef NH_Packkin;
 		public static BeardDef NH_PackkinBeard;
         public static ThingDef NH_Waterborne;
+        public static ThingDef NH_Fulcrum;
     }
     [StaticConstructorOnStartup]
     public static class Core
@@ -65,7 +67,7 @@ namespace HearlyHuman
         }
         public static void Postfix()
         {
-            //BodyPartRecord_Label_Patch.curPawn = null;
+            BodyPartRecord_Label_Patch.curPawn = null;
         }
     }
 
@@ -78,7 +80,7 @@ namespace HearlyHuman
         }
         public static void Postfix()
         {
-            //BodyPartRecord_Label_Patch.curPawn = null;
+            BodyPartRecord_Label_Patch.curPawn = null;
         }
     }
 
@@ -91,7 +93,7 @@ namespace HearlyHuman
         }
         public static void Postfix()
         {
-            //BodyPartRecord_Label_Patch.curPawn = null;
+            BodyPartRecord_Label_Patch.curPawn = null;
         }
     }
 
@@ -104,7 +106,7 @@ namespace HearlyHuman
         }
         public static void Postfix()
         {
-            //BodyPartRecord_Label_Patch.curPawn = null;
+            BodyPartRecord_Label_Patch.curPawn = null;
         }
     }
 
@@ -116,12 +118,9 @@ namespace HearlyHuman
         {
             if (curPawn != null)
             {
-                if (curPawn.def == NearlyHumanDefOf.NH_Waterborne)
+                if (curPawn.def == NearlyHumanDefOf.NH_Fulcrum)
                 {
-                    //if (__instance.def == BodyPartDefOf.Heart)
-                    //{
-                    //    __result = "NH.TwoHearts".Translate();
-                    //}
+                    __result = "NH.Robo".Translate() + __result;
                 }
             }
         }
@@ -134,12 +133,9 @@ namespace HearlyHuman
         {
             if (BodyPartRecord_Label_Patch.curPawn != null)
             {
-                if (BodyPartRecord_Label_Patch.curPawn.def == NearlyHumanDefOf.NH_Waterborne)
+                if (BodyPartRecord_Label_Patch.curPawn.def == NearlyHumanDefOf.NH_Fulcrum)
                 {
-                    //if (__instance.def == BodyPartDefOf.Heart)
-                    //{
-                    //    __result = "NH.TwoHearts".Translate().CapitalizeFirst();
-                    //}
+                    __result = ("NH.Robo".Translate() + __result.UncapitalizeFirst()).CapitalizeFirst();
                 }
             }
         }

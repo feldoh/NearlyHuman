@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>NH_Fulcrum</defName>
+		<label>fulcrum</label>
+		<alienRace>
+			<generalSettings>
+				<alienPartGenerator>
+					<aliencrowntypes Inherit="False">
+						<li>HeadAlienD_1</li>
+						<li>HeadAlienD_2</li>
+						<li>HeadAlienD_3</li>
+						<li>HeadAlienD_4</li>
+						<li>HeadAlienD_5</li>
+						<li>HeadAlienD_6</li>
+						<li>HeadAlienD_7</li>
+						<li>HeadAlienD_8</li>
+					</aliencrowntypes>
+					<alienbodytypes Inherit="False">
+						<li>Female</li>
+						<li>Male</li>
+					</alienbodytypes>
+				</alienPartGenerator>
+			</generalSettings>
+			<styleSettings>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>true</hasStyle>
+                        <styleTagsOverride>
+                            <li>Fulcrum_Hair</li>
+                        </styleTagsOverride>
+					</value>
+				</li>
+			</styleSettings>
+			<graphicPaths Inherit="False">
+				<li>
+					<head>Fulcrum/Head/</head>
+					<body>Fulcrum/Body/</body>
+				</li>
+			</graphicPaths>
+		</alienRace>
+		<race>
+			<hasGenders>false</hasGenders>
+			<nameCategory>HumanStandard</nameCategory>
+			<nameGenerator>NH_NameGeneratorFulcrum</nameGenerator>
+		</race>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

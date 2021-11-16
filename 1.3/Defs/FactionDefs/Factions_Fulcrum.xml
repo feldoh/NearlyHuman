@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<FactionDef ParentName="FactionBase" Name="NH_FulcrumFactionBase" Abstract="True">
+		<pawnSingular>NH_Fulcrum</pawnSingular>
+		<pawnsPlural>fulcrum</pawnsPlural>
+		<categoryTag>NH_Fulcrum</categoryTag>
+		<listOrderPriority>30</listOrderPriority>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>Fulcrum leader</leaderTitle>
+		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+		<techLevel>Industrial</techLevel>
+		<settlementNameMaker>NH_NamerFactionFulcrumSettlement</settlementNameMaker>
+		<allowedCultures><li>NH_Fulcrum_Culture</li></allowedCultures>
+		<disallowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<structureMemeWeights>
+			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+			<Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+			<Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+			<Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
+			<Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+			<Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+		</structureMemeWeights>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Outlander</li>
+				</categories>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+				</categories>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFilters>
+		<geneticVariance>0.8</geneticVariance>
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_CombatSupplier</li>
+			<li>Caravan_Outlander_Exotic</li>
+			<li>Caravan_Outlander_PirateMerchant</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Visitor_Outlander_Standard</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+		<raidLootMaker>NH_FulcrumRaidLootMaker</raidLootMaker>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<NH_Fulcrum_CivilianOne>5</NH_Fulcrum_CivilianOne>
+					<NH_Fulcrum_CivilianTwo>5</NH_Fulcrum_CivilianTwo>
+					<NH_Fulcrum_CivilianThree>1.5</NH_Fulcrum_CivilianThree>
+					<NH_Fulcrum_CivilianFour>5</NH_Fulcrum_CivilianFour>
+					<NH_Fulcrum_CivilianFive>5</NH_Fulcrum_CivilianFive>
+					<NH_Fulcrum_CivilianSix>1.5</NH_Fulcrum_CivilianSix>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<NH_Fulcrum_TraderOne>1</NH_Fulcrum_TraderOne>
+				</traders>
+				<carriers>
+					<Muffalo>6</Muffalo>
+					<Dromedary>5</Dromedary>
+					<Alpaca>2</Alpaca>
+					<Elephant>1</Elephant>
+				</carriers>
+				<guards>
+					<NH_Fulcrum_CivilianOne>5</NH_Fulcrum_CivilianOne>
+					<NH_Fulcrum_CivilianTwo>5</NH_Fulcrum_CivilianTwo>
+					<NH_Fulcrum_SoldierOne>5</NH_Fulcrum_SoldierOne>
+					<NH_Fulcrum_SoldierTwo>5</NH_Fulcrum_SoldierTwo>
+					<NH_Fulcrum_SoldierThree>1.5</NH_Fulcrum_SoldierThree>
+					<NH_Fulcrum_SoldierFour>1.5</NH_Fulcrum_SoldierFour>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+				<options>
+					<NH_Fulcrum_SoldierOne>5</NH_Fulcrum_SoldierOne>
+					<NH_Fulcrum_SoldierTwo>5</NH_Fulcrum_SoldierTwo>
+					<NH_Fulcrum_SoldierThree>1.5</NH_Fulcrum_SoldierThree>
+					<NH_Fulcrum_SoldierFour>5</NH_Fulcrum_SoldierFour>
+					<NH_Fulcrum_SoldierFive>5</NH_Fulcrum_SoldierFive>
+					<NH_Fulcrum_SoldierSix>1.5</NH_Fulcrum_SoldierSix>
+					<NH_Fulcrum_FactionLeaderOne>1.5</NH_Fulcrum_FactionLeaderOne>
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<NH_Fulcrum_CivilianOne>5</NH_Fulcrum_CivilianOne>
+					<NH_Fulcrum_CivilianTwo>5</NH_Fulcrum_CivilianTwo>
+					<NH_Fulcrum_CivilianThree>1.5</NH_Fulcrum_CivilianThree>
+					<NH_Fulcrum_SoldierOne>5</NH_Fulcrum_SoldierOne>
+					<NH_Fulcrum_SoldierTwo>5</NH_Fulcrum_SoldierTwo>
+					<NH_Fulcrum_SoldierThree>1.5</NH_Fulcrum_SoldierThree>
+					<NH_Fulcrum_SoldierFour>1.5</NH_Fulcrum_SoldierFour>
+					<NH_Fulcrum_FactionLeaderOne>1.5</NH_Fulcrum_FactionLeaderOne>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+	</FactionDef>
+
+	<ThingSetMakerDef>
+		<defName>NH_FulcrumRaidLootMaker</defName>
+		<root Class="ThingSetMaker_MarketValue">
+			<fixedParams>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+						<li>MedicineIndustrial</li>
+						<li>ComponentIndustrial</li>
+						<li>MealSurvivalPack</li>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+			</fixedParams>
+		</root>
+	</ThingSetMakerDef>
+
+	<FactionDef ParentName="NH_FulcrumFactionBase">
+		<defName>NH_FulcrumCivil</defName>
+		<label>Fulcrum civil</label>
+		<description>.</description>
+		<factionNameMaker>NH_NamerFactionFulcrumCivil</factionNameMaker>
+		<colorSpectrum>
+			<li>(0.35, 0.30, 0.60)</li>
+			<li>(0.45, 0.40, 0.90)</li>
+		</colorSpectrum>
+		<classicIdeo>true</classicIdeo>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>10</configurationListOrderPriority>
+	</FactionDef>
+
+	<FactionDef ParentName="NH_FulcrumFactionBase">
+		<defName>NH_FulcrumHostile</defName>
+		<label>Fulcrum hostile</label>
+		<factionNameMaker>NH_NamerFactionFulcrumHostile</factionNameMaker>
+		<description>.</description>
+		<colorSpectrum>
+			<li>(0, 0.4, 0.94)</li>
+			<li>(0.64, 0.8, 1)</li>
+		</colorSpectrum>
+		<factionIconPath>World/WorldObjects/Expanding/TownRough</factionIconPath>
+		<naturalEnemy>true</naturalEnemy>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+		</requiredMemes>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>20</configurationListOrderPriority>
+	</FactionDef>
+
+
+</Defs>
