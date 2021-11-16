@@ -2,24 +2,28 @@
 <Defs>
 
 	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
-		<defName>NH_Hivekind</defName>
-		<label>hivekind</label>
-		<statBases>
-			<ShootingAccuracyPawn>10</ShootingAccuracyPawn>
-			<MoveSpeed>6.0</MoveSpeed>
-		</statBases>
+		<defName>NH_Stargazer</defName>
+		<label>stargazer</label>
 		<alienRace>
 			<generalSettings>
 				<alienPartGenerator>
 					<aliencrowntypes Inherit="False">
-						<li>Average</li>
+						<li>HeadAlienE1</li>
+						<li>HeadAlienE2</li>
 					</aliencrowntypes>
 					<alienbodytypes Inherit="False">
-						<li>Thin</li>
+						<li>Female</li>
+						<li>Male</li>
 					</alienbodytypes>
 				</alienPartGenerator>
 			</generalSettings>
 			<styleSettings>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
 				<li>
 					<key>TattooDef</key>
 					<value>
@@ -32,24 +36,17 @@
 						<hasStyle>false</hasStyle>
 					</value>
 				</li>
-				<li>
-					<key>HairDef</key>
-					<value>
-						<hasStyle>false</hasStyle>
-					</value>
-				</li>
 			</styleSettings>
 			<graphicPaths Inherit="False">
 				<li>
-					<head>Hivekind/Head/</head>
-					<body>Hivekind/Body/</body>
+					<head>Stargazer/Head/</head>
+					<body>Stargazer/Body/</body>
 				</li>
 			</graphicPaths>
 		</alienRace>
 		<race>
-			<body>NH_Hivekind</body>
-			<bloodDef>NH_Hivekind_Filth_Blood</bloodDef>
-			<fleshType>NH_Hivekind</fleshType>
+			<bloodDef>NH_Stargazer_Filth_Blood</bloodDef>
+			<fleshType>NH_Stargazer</fleshType>
 		</race>
 	</AlienRace.ThingDef_AlienRace>
 </Defs>

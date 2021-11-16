@@ -45,6 +45,8 @@
 		</alienRace>
 		<race>
 			<body>NH_Waterborne</body>
+			<bloodDef>NH_Waterborne_Filth_Blood</bloodDef>
+			<fleshType>NH_Waterborne</fleshType>
 		</race>
 	</AlienRace.ThingDef_AlienRace>
 </Defs>

@@ -21,9 +21,9 @@
 					<key>BeardDef</key>
 					<value>
 						<hasStyle>true</hasStyle>
-						<styleTags>
+						<styleTagsOverride>
 							<li>NH_Packkin</li>
-						</styleTags>
+						</styleTagsOverride>
 					</value>
 				</li>
 				<li>
@@ -42,6 +42,8 @@
 		</alienRace>
 		<race>
 			<baseHealthScale>1.1</baseHealthScale>
+			<bloodDef>NH_Packkin_Filth_Blood</bloodDef>
+			<fleshType>NH_Packkin</fleshType>
 		</race>
 		<tools Inherit="False">
 			<li>

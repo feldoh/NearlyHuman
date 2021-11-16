@@ -4,6 +4,9 @@
 	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
 		<defName>NH_Fulcrum</defName>
 		<label>fulcrum</label>
+		<statBases>
+			<ConstructionSpeed>3</ConstructionSpeed>
+		</statBases>
 		<alienRace>
 			<generalSettings>
 				<alienPartGenerator>
@@ -57,6 +60,8 @@
 			<hasGenders>false</hasGenders>
 			<nameCategory>HumanStandard</nameCategory>
 			<nameGenerator>NH_NameGeneratorFulcrum</nameGenerator>
+			<bloodDef>Filth_Fuel</bloodDef>
+			<fleshType>NH_Fulcrum</fleshType>
 		</race>
 	</AlienRace.ThingDef_AlienRace>
 </Defs>

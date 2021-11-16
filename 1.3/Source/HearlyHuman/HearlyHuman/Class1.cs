@@ -21,6 +21,7 @@ namespace HearlyHuman
 		public static BeardDef NH_PackkinBeard;
         public static ThingDef NH_Waterborne;
         public static ThingDef NH_Fulcrum;
+        public static ThingDef NH_Stargazer;
     }
     [StaticConstructorOnStartup]
     public static class Core
@@ -197,6 +198,68 @@ namespace HearlyHuman
                 }
             }
             return cost;
+        }
+    }
+
+    [HarmonyPatch(typeof(Pawn_HealthTracker), "HealthTick")]
+    public static class Pawn_HealthTracker_HealthTick_Patch
+    {
+        public static void Postfix(Pawn_HealthTracker __instance, Pawn ___pawn)
+        {
+            var pawn = ___pawn;
+            if (pawn.Dead)
+            {
+                return;
+            }
+            if (pawn.def == NearlyHumanDefOf.NH_Stargazer)
+            {
+                for (var i = 0; i < 3; i++)
+                {
+                    if (pawn.RaceProps.IsFlesh && pawn.IsHashIntervalTick(600) && (pawn.needs.food == null || !pawn.needs.food.Starving))
+                    {
+                        bool flag2 = false;
+                        if (__instance.hediffSet.HasNaturallyHealingInjury())
+                        {
+                            float num3 = 8f;
+                            if (pawn.GetPosture() != 0)
+                            {
+                                num3 += 4f;
+                                Building_Bed building_Bed = pawn.CurrentBed();
+                                if (building_Bed != null)
+                                {
+                                    num3 += building_Bed.def.building.bed_healPerDay;
+                                }
+                            }
+                            foreach (Hediff hediff3 in __instance.hediffSet.hediffs)
+                            {
+                                HediffStage curStage = hediff3.CurStage;
+                                if (curStage != null && curStage.naturalHealingFactor != -1f)
+                                {
+                                    num3 *= curStage.naturalHealingFactor;
+                                }
+                            }
+                            (from x in __instance.hediffSet.GetHediffs<Hediff_Injury>()
+                             where x.CanHealNaturally()
+                             select x).RandomElement().Heal(num3 * pawn.HealthScale * 0.01f * pawn.GetStatValue(StatDefOf.InjuryHealingFactor));
+                            flag2 = true;
+                        }
+                        if (__instance.hediffSet.HasTendedAndHealingInjury() && (pawn.needs.food == null || !pawn.needs.food.Starving))
+                        {
+                            Hediff_Injury hediff_Injury = (from x in __instance.hediffSet.GetHediffs<Hediff_Injury>()
+                                                           where x.CanHealFromTending()
+                                                           select x).RandomElement();
+                            float tendQuality = hediff_Injury.TryGetComp<HediffComp_TendDuration>().tendQuality;
+                            float num4 = GenMath.LerpDouble(0f, 1f, 0.5f, 1.5f, Mathf.Clamp01(tendQuality));
+                            hediff_Injury.Heal(8f * num4 * pawn.HealthScale * 0.01f * pawn.GetStatValue(StatDefOf.InjuryHealingFactor));
+                            flag2 = true;
+                        }
+                        if (flag2 && !__instance.HasHediffsNeedingTendByPlayer() && !HealthAIUtility.ShouldSeekMedicalRest(pawn) && !__instance.hediffSet.HasTendedAndHealingInjury() && PawnUtility.ShouldSendNotificationAbout(pawn))
+                        {
+                            Messages.Message("MessageFullyHealed".Translate(pawn.LabelCap, pawn), pawn, MessageTypeDefOf.PositiveEvent);
+                        }
+                    }
+                }
+            }
         }
     }
 }
