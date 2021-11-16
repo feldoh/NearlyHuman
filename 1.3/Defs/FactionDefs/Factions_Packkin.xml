@@ -12,7 +12,7 @@
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>Packkin leader</leaderTitle>
-		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+		<factionIconPath>World/WorldObjects/Expanding/PackkinTown</factionIconPath>
 		<techLevel>Industrial</techLevel>
 		<settlementNameMaker>NH_NamerFactionPackkinSettlement</settlementNameMaker>
 		<allowedCultures><li>NH_Packkin_Culture</li></allowedCultures>
@@ -170,7 +170,7 @@
 			<li>(0, 0.4, 0.94)</li>
 			<li>(0.64, 0.8, 1)</li>
 		</colorSpectrum>
-		<factionIconPath>World/WorldObjects/Expanding/TownRough</factionIconPath>
+		<factionIconPath>World/WorldObjects/Expanding/PackkinTownRough</factionIconPath>
 		<naturalEnemy>true</naturalEnemy>
 		<requiredMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
