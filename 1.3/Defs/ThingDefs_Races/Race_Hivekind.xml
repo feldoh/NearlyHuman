@@ -17,6 +17,39 @@
 					<alienbodytypes Inherit="False">
 						<li>Thin</li>
 					</alienbodytypes>
+					<colorChannels Inherit="False">
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(38, 38, 38,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(51, 51, 51, 255)</only>
+									</li>
+									<li>
+										<weight>3</weight>
+										<only>RGBA(89, 89, 89, 255)</only>
+									</li>
+									<li>
+										<weight>3</weight>
+										<only>RGBA(115, 115, 115, 255)</only>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(255, 255, 255, 255)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
 				</alienPartGenerator>
 			</generalSettings>
 			<styleSettings>
