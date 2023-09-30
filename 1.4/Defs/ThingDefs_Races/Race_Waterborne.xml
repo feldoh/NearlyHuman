@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>NH_Waterborne</defName>
+		<label>waterborne</label>
+		<alienRace>
+			<generalSettings>
+				<alienPartGenerator>
+					<aliencrowntypes Inherit="False">
+						<li>Average</li>
+					</aliencrowntypes>
+					<alienbodytypes Inherit="False">
+						<li>Female</li>
+						<li>Male</li>
+					</alienbodytypes>
+					<colorChannels Inherit="False">
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(38, 38, 38,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(51, 51, 51, 255)</only>
+									</li>
+									<li>
+										<weight>3</weight>
+										<only>RGBA(89, 89, 89, 255)</only>
+									</li>
+									<li>
+										<weight>3</weight>
+										<only>RGBA(115, 115, 115, 255)</only>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(255, 255, 255, 255)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+			</generalSettings>
+			<styleSettings>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+			<graphicPaths Inherit="False">
+				<li>
+					<head>Waterborne/Head/</head>
+					<body>Waterborne/Body/</body>
+				</li>
+			</graphicPaths>
+		</alienRace>
+		<race>
+			<body>NH_Waterborne</body>
+			<bloodDef>NH_Waterborne_Filth_Blood</bloodDef>
+			<fleshType>NH_Waterborne</fleshType>
+		</race>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>
