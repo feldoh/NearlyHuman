@@ -14,28 +14,46 @@
         <FileAlignment>512</FileAlignment>
         <Deterministic>true</Deterministic>
         <LangVersion>latest</LangVersion>
+        <OutputPath>../../../Assemblies/</OutputPath>
+        <ZipFilePath>../../../../$(AssemblyName).zip</ZipFilePath>
+        <ReleasePath>../../../../Release</ReleasePath>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <DebugSymbols>false</DebugSymbols>
-        <DebugType>none</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
         <Optimize>false</Optimize>
-        <OutputPath>../../../Assemblies/</OutputPath>
         <DefineConstants>DEBUG;TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <DebugType>pdbonly</DebugType>
+        <DebugType>none</DebugType>
         <Optimize>true</Optimize>
-        <OutputPath>bin/Release/</OutputPath>
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
+
     <ItemGroup>
-        <Reference Include="AlienRace">
-          <HintPath>..\..\..\..\..\839005762\Assemblies\AlienRace.dll</HintPath>
-        </Reference>
+        <ReleaseFiles Include="../../../../*.xml;../../../../*.md;../../../../LICENSE;../../../../1.*/**"
+                      Exclude="../../../../1.*/Source/**;../../../../1.*/Assemblies/**">
+            <Link>Files/%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </ReleaseFiles>
+        <AboutFiles Include="../../../../About/**;">
+            <Link>Files/About/%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </AboutFiles>
+        <CommonFiles Include="../../../../Common/**">
+            <Link>Files/Common/%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </CommonFiles>
+        <ReleaseAssemblies Include="../../../../1.*/Assemblies/**" Exclude="../../../../1.*/Assemblies/0Harmony.dll">
+            <Link>Files/Assemblies/%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </ReleaseAssemblies>
+        <GitMeta Include="../../../../.git*">
+            <Link>Files/%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </GitMeta>
+    </ItemGroup>
+
+    <ItemGroup>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Xml.Linq"/>
@@ -74,10 +92,53 @@
             </ItemGroup>
         </Otherwise>
     </Choose>
+    <Choose>
+        <When Condition="Exists('../../../../../839005762/Assemblies/AlienRace.dll')">
+            <ItemGroup>
+                <Reference Include="AlienRace">
+                    <HintPath>../../../../../839005762/Assemblies/AlienRace.dll</HintPath>
+                    <Private>False</Private>
+                </Reference>
+            </ItemGroup>
+        </When>
+        <When Condition="Exists('../../../../../../../../workshop/content/294100/839005762/1.3/Assemblies/AlienRace.dll')">
+            <ItemGroup>
+                <Reference Include="AlienRace">
+                    <HintPath>../../../../../../../../workshop/content/294100/839005762/1.3/Assemblies/AlienRace.dll</HintPath>
+                    <Private>False</Private>
+                </Reference>
+            </ItemGroup>
+        </When>
+        <Otherwise>
+            <ItemGroup>
+                <PackageReference Include="Krafs.Rimworld.Ref" PrivateAssets="All">
+                    <Version>1.4.3704</Version>
+                </PackageReference>
+            </ItemGroup>
+        </Otherwise>
+    </Choose>
     <ItemGroup>
-        <PackageReference Include="Lib.Harmony">
+        <PackageReference Include="Lib.Harmony" ExcludeAssets="Runtime">
             <Version>2.2.2</Version>
         </PackageReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)/Microsoft.CSharp.targets"/>
+
+    <Target Name="CleanAssemblies" AfterTargets="Clean" >
+        <RemoveDir Directories="$(OutputPath)" Condition="Exists('$(OutputPath)')"/>
+    </Target>
+
+    <Target Name="CleanRelease" AfterTargets="Clean" >
+        <RemoveDir Directories="$(ReleasePath)" Condition="Exists('$(ReleasePath)')"/>
+        <Delete Files="$(ZipFilePath)" Condition="Exists('$(ZipFilePath)')" />
+    </Target>
+
+    <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' " DependsOnTargets="CleanRelease">
+        <MakeDir Directories="$(ReleasePath)" />
+        <Copy SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'$(ReleasePath)/%(RecursiveDir)%(Filename)%(Extension)')" />
+        <Copy SourceFiles="@(ReleaseAssemblies)" DestinationFiles="@(ReleaseAssemblies->'$(ReleasePath)/%(RecursiveDir)%(Filename)%(Extension)')" />
+        <Copy SourceFiles="@(AboutFiles)" DestinationFolder="$(ReleasePath)/About" />
+        <Copy SourceFiles="@(CommonFiles)" DestinationFiles="@(CommonFiles->'$(ReleasePath)/Common/%(RecursiveDir)%(Filename)%(Extension)')" />
+        <ZipDirectory DestinationFile="$(ZipFilePath)" SourceDirectory="$(ReleasePath)" Overwrite="true" />
+    </Target>
 </Project>
