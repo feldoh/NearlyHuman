@@ -1,9 +1,8 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
 using Verse;
-using Verse.AI;
 
 namespace NearlyHuman.HarmonyPatches
 {
@@ -15,7 +14,6 @@ namespace NearlyHuman.HarmonyPatches
             if (pawn.def != NearlyHumanDefOf.NH_Packkin || styleItemDef != NearlyHumanDefOf.NH_PackkinBeard) return true;
             __result = true;
             return false;
-
         }
     }
 
@@ -83,17 +81,17 @@ namespace NearlyHuman.HarmonyPatches
                             if (curStage != null && curStage.naturalHealingFactor != -1f) num3 *= curStage.naturalHealingFactor;
                         }
 
-                        (from x in __instance.hediffSet.GetHediffs<Hediff_Injury>()
-                            where x.CanHealNaturally()
-                            select x).RandomElement().Heal(num3 * ___pawn.HealthScale * 0.01f * ___pawn.GetStatValue(StatDefOf.InjuryHealingFactor));
+                        List<Hediff_Injury> healableHediffs = new();
+                        __instance.hediffSet.GetHediffs(ref healableHediffs, injury => injury.CanHealNaturally());
+                        healableHediffs.RandomElement().Heal(num3 * ___pawn.HealthScale * 0.01f * ___pawn.GetStatValue(StatDefOf.InjuryHealingFactor));
                         flag2 = true;
                     }
 
-                    if (__instance.hediffSet.HasTendedAndHealingInjury() && (___pawn.needs.food == null || !___pawn.needs.food.Starving))
+                    if (__instance.hediffSet.HasTendedAndHealingInjury() && ___pawn.needs.food is not { Starving: true })
                     {
-                        Hediff_Injury hediff_Injury = (from x in __instance.hediffSet.GetHediffs<Hediff_Injury>()
-                            where x.CanHealFromTending()
-                            select x).RandomElement();
+                        List<Hediff_Injury> healableHediffs = new();
+                        __instance.hediffSet.GetHediffs(ref healableHediffs, injury => injury.CanHealNaturally());
+                        Hediff_Injury hediff_Injury = healableHediffs.RandomElement();
                         var tendQuality = hediff_Injury.TryGetComp<HediffComp_TendDuration>().tendQuality;
                         var num4 = GenMath.LerpDouble(0f, 1f, 0.5f, 1.5f, Mathf.Clamp01(tendQuality));
                         hediff_Injury.Heal(8f * num4 * ___pawn.HealthScale * 0.01f * ___pawn.GetStatValue(StatDefOf.InjuryHealingFactor));

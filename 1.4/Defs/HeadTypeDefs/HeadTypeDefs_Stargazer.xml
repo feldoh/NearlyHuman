@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Stargazer_HeadAlienE1_Male</defName>
+        <graphicPath>Stargazer/Head/Male_HeadAlienE1</graphicPath>
+        <gender>Male</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Stargazer_HeadAlienE1_Female</defName>
+        <graphicPath>Stargazer/Head/Female_HeadAlienE1</graphicPath>
+        <gender>Female</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Stargazer_HeadAlienE2_Male</defName>
+        <graphicPath>Stargazer/Head/Male_HeadAlienE2</graphicPath>
+        <gender>Male</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Stargazer_HeadAlienE2_Female</defName>
+        <graphicPath>Stargazer/Head/Female_HeadAlienE2</graphicPath>
+        <gender>Female</gender>
+    </HeadTypeDef>
+</Defs>

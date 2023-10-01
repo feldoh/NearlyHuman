@@ -50,7 +50,7 @@ namespace NearlyHuman.HarmonyPatches
         public static int PathCostChangeIfNeeded(Pawn pawn, TerrainDef def, int cost)
         {
             if (pawn.def != NearlyHumanDefOf.NH_Waterborne) return cost;
-            if (def != null && def.IsWater)
+            if (def is { IsWater: true })
                 cost /= 3;
 
             return cost;

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Fulcrum_HeadAlienD_1</defName>
+        <graphicPath>Fulcrum/Head/None_HeadAlienD_1</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Fulcrum_HeadAlienD_2</defName>
+        <graphicPath>Fulcrum/Head/None_HeadAlienD_2</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Fulcrum_HeadAlienD_3</defName>
+        <graphicPath>Fulcrum/Head/None_HeadAlienD_3</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Fulcrum_HeadAlienD_4</defName>
+        <graphicPath>Fulcrum/Head/None_HeadAlienD_4</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Fulcrum_HeadAlienD_5</defName>
+        <graphicPath>Fulcrum/Head/None_HeadAlienD_5</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Fulcrum_HeadAlienD_6</defName>
+        <graphicPath>Fulcrum/Head/None_HeadAlienD_6</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Fulcrum_HeadAlienD_7</defName>
+        <graphicPath>Fulcrum/Head/None_HeadAlienD_7</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Fulcrum_HeadAlienD_8</defName>
+        <graphicPath>Fulcrum/Head/None_HeadAlienD_8</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+</Defs>

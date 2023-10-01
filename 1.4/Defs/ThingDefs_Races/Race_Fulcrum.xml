@@ -10,20 +10,20 @@
 		<alienRace>
 			<generalSettings>
 				<alienPartGenerator>
-					<aliencrowntypes Inherit="False">
-						<li>HeadAlienD_1</li>
-						<li>HeadAlienD_2</li>
-						<li>HeadAlienD_3</li>
-						<li>HeadAlienD_4</li>
-						<li>HeadAlienD_5</li>
-						<li>HeadAlienD_6</li>
-						<li>HeadAlienD_7</li>
-						<li>HeadAlienD_8</li>
-					</aliencrowntypes>
-					<alienbodytypes Inherit="False">
+					<headTypes Inherit="False">
+						<li>NH_Fulcrum_HeadAlienD_1</li>
+						<li>NH_Fulcrum_HeadAlienD_2</li>
+						<li>NH_Fulcrum_HeadAlienD_3</li>
+						<li>NH_Fulcrum_HeadAlienD_4</li>
+						<li>NH_Fulcrum_HeadAlienD_5</li>
+						<li>NH_Fulcrum_HeadAlienD_6</li>
+						<li>NH_Fulcrum_HeadAlienD_7</li>
+						<li>NH_Fulcrum_HeadAlienD_8</li>
+					</headTypes>
+					<bodyTypes Inherit="False">
 						<li>Female</li>
 						<li>Male</li>
-					</alienbodytypes>
+					</bodyTypes>
 					<colorChannels Inherit="False">
 						<li>
 							<name>skin</name>
@@ -76,18 +76,29 @@
 					<key>HairDef</key>
 					<value>
 						<hasStyle>true</hasStyle>
-                        <styleTagsOverride>
-                            <li>Fulcrum_Hair</li>
-                        </styleTagsOverride>
+						<styleTagsOverride>
+							<li>Fulcrum_Hair</li>
+						</styleTagsOverride>
 					</value>
 				</li>
 			</styleSettings>
 			<graphicPaths Inherit="False">
-				<li>
-					<head>Fulcrum/Head/</head>
-					<body>Fulcrum/Body/</body>
-				</li>
+				<head>
+					<path>Fulcrum/Head/</path>
+				</head>
+				<body>
+					<path>Fulcrum/Body/</path>
+				</body>
 			</graphicPaths>
+			<raceRestriction>
+				<blackEndoCategories>
+					<li>BodyType</li>
+					<li>Jaw</li>
+				</blackEndoCategories>
+				<blackGeneList>
+					<li>Furskin</li>
+				</blackGeneList>
+			</raceRestriction>
 		</alienRace>
 		<race>
 			<hasGenders>false</hasGenders>

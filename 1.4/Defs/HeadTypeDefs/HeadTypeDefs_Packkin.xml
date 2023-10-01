@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Packkin_Female_Average</defName>
+        <graphicPath>Packkin/Head/Female_Average</graphicPath>
+        <gender>Female</gender>
+    </HeadTypeDef>
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>NH_Packkin_Male_Average</defName>
+        <graphicPath>Packkin/Head/Male_Average</graphicPath>
+        <gender>Male</gender>
+    </HeadTypeDef>
+</Defs>
