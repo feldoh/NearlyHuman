@@ -109,16 +109,9 @@
                 </Reference>
             </ItemGroup>
         </When>
-        <Otherwise>
-            <ItemGroup>
-                <PackageReference Include="Krafs.Rimworld.Ref" PrivateAssets="All">
-                    <Version>1.4.3704</Version>
-                </PackageReference>
-            </ItemGroup>
-        </Otherwise>
     </Choose>
     <ItemGroup>
-        <PackageReference Include="Lib.Harmony" ExcludeAssets="Runtime">
+        <PackageReference Include="Lib.Harmony" ExcludeAssets="runtime">
             <Version>2.2.2</Version>
         </PackageReference>
     </ItemGroup>
