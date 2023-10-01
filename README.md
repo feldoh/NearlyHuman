@@ -14,9 +14,39 @@
 
 From the mind behind "Total Control" comes Nearly Human, a unique pack of vanilla apparel compatible alien races designed to bring greater diversity to your neck of the rim!
 
+**Originally posted by a satisfied customer:**
+> Nearly Human isn't like other race or faction mods. It doesn't come with a bunch of fancy gimmicks, nor any apparel or weaponry, nor established lore. Each race in Nearly Human is visually distinct, with race specific attributes to fit their core style. Rimsential is handing you the canvas and saying "tell us a fantastic story"!
+
+## Details
+>Wait, how am I supposed to use this?
+
+Why, through the power of Total Control, of course! When combined with the cultural crafting powers of the ideology DLC, anything is possible! We also recommend Faction Customizer - player crafted ideologies for player crafted races and more!
+
+>Wait, I can just use these mods, dress them up, slap an ideology on them, and go?
+
+It's that easy. No fluff, no mod bloat, and no mess. Nearly Human is a pack of alien races ready to be whoever you decide they should be! It's YOUR story after all! Each race comes with two basic template factions, one eager to come to your aid, and another presently plotting your downfall. Create loyal allies, mischievous misfits, or roaring rivals!
+
+### Races:
+
+#### Packkin
+The Packkin or "ape men" are fierce melee fighters and can carry more than the average bear! (*bear based statements accuracy may vary)
+
+#### Waterborne
+The Waterborne or "fish bros" crawled from the oceanic depths of their home world and can move faster on water tiles as a result!
+
+#### Hivekind
+The Hivekind or "that one with the extra peepers" are fast on their feet and their extra eyes give them an advantage when ranged weaponry is involved!
+
+#### Fulcrum
+The Fulcrum or "definitely not Wall-E" were created with efficiency in mind and are outmatched by few where building is concerned!
+
+#### Stargazers
+The Stargazers or "is that a Zabrak" are a race of tattoo covered natural healers from far, far, far away. Did we mention they have tattoos? Did we mention far, far, away? No, seriously. Did we?
+
 ## Contributors
 * Orpheusly
 * Taranchuk
+* Krazy4Games
 * Feldoh
 
 ## Building and Releasing
