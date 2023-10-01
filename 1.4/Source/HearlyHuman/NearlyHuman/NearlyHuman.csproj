@@ -45,7 +45,7 @@
         <CommonFiles Include="../../../../Common/**">
             <Link>Files/Common/%(RecursiveDir)%(Filename)%(Extension)</Link>
         </CommonFiles>
-        <ReleaseAssemblies Include="../../../../1.*/Assemblies/**" Exclude="../../../../1.*/Assemblies/0Harmony.dll">
+        <ReleaseAssemblies Include="../../../../1.*/Assemblies/*.dll" Exclude="../../../../1.*/Assemblies/0Harmony.dll">
             <Link>Files/Assemblies/%(RecursiveDir)%(Filename)%(Extension)</Link>
         </ReleaseAssemblies>
         <GitMeta Include="../../../../.git*">
