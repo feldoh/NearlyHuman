@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<PawnKindDef Name="NH_StargazerPawnKindBase" Abstract="True">
+		<race>NH_Stargazer</race>
+		<chemicalAddictionChance>0.05</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+	</PawnKindDef>
+
+	<PawnKindDef Name="NH_StargazerCivilianKindBase" ParentName="NH_StargazerPawnKindBase" Abstract="True">
+		<combatPower>45</combatPower>
+		<isFighter>false</isFighter>
+		<initialWillRange>0~1</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="NH_StargazerCombatKindBase" ParentName="NH_StargazerPawnKindBase" Abstract="True">
+		<combatPower>60</combatPower>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCivilianKindBase">
+		<defName>NH_Stargazer_CivilianOne</defName>
+		<label>Stargazer civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCivilianKindBase">
+		<defName>NH_Stargazer_CivilianTwo</defName>
+		<label>Stargazer civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCivilianKindBase">
+		<defName>NH_Stargazer_CivilianThree</defName>
+		<label>Stargazer civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCivilianKindBase">
+		<defName>NH_Stargazer_CivilianFour</defName>
+		<label>Stargazer civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCivilianKindBase">
+		<defName>NH_Stargazer_CivilianFive</defName>
+		<label>Stargazer civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCivilianKindBase">
+		<defName>NH_Stargazer_CivilianSix</defName>
+		<label>Stargazer civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCombatKindBase">
+		<defName>NH_Stargazer_SoldierOne</defName>
+		<label>Stargazer soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCombatKindBase">
+		<defName>NH_Stargazer_SoldierTwo</defName>
+		<label>Stargazer soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCombatKindBase">
+		<defName>NH_Stargazer_SoldierThree</defName>
+		<label>Stargazer soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCombatKindBase">
+		<defName>NH_Stargazer_SoldierFour</defName>
+		<label>Stargazer soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCombatKindBase">
+		<defName>NH_Stargazer_SoldierFive</defName>
+		<label>Stargazer soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerCombatKindBase">
+		<defName>NH_Stargazer_SoldierSix</defName>
+		<label>Stargazer soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_StargazerPawnKindBase">
+		<defName>NH_Stargazer_TraderOne</defName>
+		<label>town trader</label>
+		<trader>true</trader>
+		<combatPower>45</combatPower>
+		<isFighter>false</isFighter>
+		<itemQuality>Normal</itemQuality>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>12~20</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="NH_StargazerFactionLeader" ParentName="NH_StargazerPawnKindBase" Abstract="True">
+		<label>Stargazer leader</label>
+		<labelPlural>Stargazer leaders</labelPlural>
+		<combatPower>40</combatPower>
+		<factionLeader>true</factionLeader>
+		<minGenerationAge>30</minGenerationAge>
+		<isFighter>false</isFighter>
+		<itemQuality>Good</itemQuality>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="NH_StargazerFactionLeader">
+		<defName>NH_Stargazer_FactionLeaderOne</defName>
+	</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BeardDef>
+    <defName>NH_PackkinBeard</defName>
+    <label>packkin beard</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Packkin_Beard</texPath>
+    <styleGender>Male</styleGender>
+    <category>NH_Packkin</category>
+    <styleTags>
+      <li>NH_Packkin</li>
+    </styleTags>
+  </BeardDef>
+
+</Defs>

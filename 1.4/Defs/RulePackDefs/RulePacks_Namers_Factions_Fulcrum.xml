@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <RulePackDef>
+    <defName>NH_NamerFactionFulcrumCivil</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Fulcrum Civil</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NH_NamerFactionFulcrumHostile</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Fulcrum Hostile</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NH_NamerFactionFulcrumSettlement</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Settlement</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+
+</Defs>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>NH_Fulcrum</defName>
+		<label>fulcrum</label>
+		<statBases>
+			<ConstructionSpeed>3</ConstructionSpeed>
+		</statBases>
+		<alienRace>
+			<generalSettings>
+				<alienPartGenerator>
+					<headTypes Inherit="False">
+						<li>NH_Fulcrum_HeadAlienD_1</li>
+						<li>NH_Fulcrum_HeadAlienD_2</li>
+						<li>NH_Fulcrum_HeadAlienD_3</li>
+						<li>NH_Fulcrum_HeadAlienD_4</li>
+						<li>NH_Fulcrum_HeadAlienD_5</li>
+						<li>NH_Fulcrum_HeadAlienD_6</li>
+						<li>NH_Fulcrum_HeadAlienD_7</li>
+						<li>NH_Fulcrum_HeadAlienD_8</li>
+					</headTypes>
+					<bodyTypes Inherit="False">
+						<li>Female</li>
+						<li>Male</li>
+					</bodyTypes>
+					<colorChannels Inherit="False">
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(38, 38, 38,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(51, 51, 51, 255)</only>
+									</li>
+									<li>
+										<weight>3</weight>
+										<only>RGBA(89, 89, 89, 255)</only>
+									</li>
+									<li>
+										<weight>3</weight>
+										<only>RGBA(115, 115, 115, 255)</only>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(255, 255, 255, 255)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+			</generalSettings>
+			<styleSettings>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>true</hasStyle>
+						<styleTagsOverride>
+							<li>Fulcrum_Hair</li>
+						</styleTagsOverride>
+					</value>
+				</li>
+			</styleSettings>
+			<graphicPaths Inherit="False">
+				<head>
+					<path>Fulcrum/Head/</path>
+				</head>
+				<body>
+					<path>Fulcrum/Body/</path>
+				</body>
+			</graphicPaths>
+			<raceRestriction>
+				<blackEndoCategories>
+					<li>BodyType</li>
+					<li>Jaw</li>
+				</blackEndoCategories>
+				<blackGeneList>
+					<li>Furskin</li>
+				</blackGeneList>
+			</raceRestriction>
+		</alienRace>
+		<race>
+			<hasGenders>false</hasGenders>
+			<nameCategory>HumanStandard</nameCategory>
+			<nameGenerator>NH_NameGeneratorFulcrum</nameGenerator>
+			<bloodDef>Filth_Fuel</bloodDef>
+			<fleshType>NH_Fulcrum</fleshType>
+		</race>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

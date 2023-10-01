@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<PawnKindDef Name="NH_HivekindPawnKindBase" Abstract="True">
+		<race>NH_Hivekind</race>
+		<chemicalAddictionChance>0.05</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+	</PawnKindDef>
+
+	<PawnKindDef Name="NH_HivekindCivilianKindBase" ParentName="NH_HivekindPawnKindBase" Abstract="True">
+		<combatPower>45</combatPower>
+		<isFighter>false</isFighter>
+		<initialWillRange>0~1</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="NH_HivekindCombatKindBase" ParentName="NH_HivekindPawnKindBase" Abstract="True">
+		<combatPower>60</combatPower>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCivilianKindBase">
+		<defName>NH_Hivekind_CivilianOne</defName>
+		<label>Hivekind civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCivilianKindBase">
+		<defName>NH_Hivekind_CivilianTwo</defName>
+		<label>Hivekind civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCivilianKindBase">
+		<defName>NH_Hivekind_CivilianThree</defName>
+		<label>Hivekind civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCivilianKindBase">
+		<defName>NH_Hivekind_CivilianFour</defName>
+		<label>Hivekind civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCivilianKindBase">
+		<defName>NH_Hivekind_CivilianFive</defName>
+		<label>Hivekind civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCivilianKindBase">
+		<defName>NH_Hivekind_CivilianSix</defName>
+		<label>Hivekind civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCombatKindBase">
+		<defName>NH_Hivekind_SoldierOne</defName>
+		<label>Hivekind soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCombatKindBase">
+		<defName>NH_Hivekind_SoldierTwo</defName>
+		<label>Hivekind soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCombatKindBase">
+		<defName>NH_Hivekind_SoldierThree</defName>
+		<label>Hivekind soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCombatKindBase">
+		<defName>NH_Hivekind_SoldierFour</defName>
+		<label>Hivekind soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCombatKindBase">
+		<defName>NH_Hivekind_SoldierFive</defName>
+		<label>Hivekind soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindCombatKindBase">
+		<defName>NH_Hivekind_SoldierSix</defName>
+		<label>Hivekind soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_HivekindPawnKindBase">
+		<defName>NH_Hivekind_TraderOne</defName>
+		<label>town trader</label>
+		<trader>true</trader>
+		<combatPower>45</combatPower>
+		<isFighter>false</isFighter>
+		<itemQuality>Normal</itemQuality>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>12~20</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="NH_HivekindFactionLeader" ParentName="NH_HivekindPawnKindBase" Abstract="True">
+		<label>Hivekind leader</label>
+		<labelPlural>Hivekind leaders</labelPlural>
+		<combatPower>40</combatPower>
+		<factionLeader>true</factionLeader>
+		<minGenerationAge>30</minGenerationAge>
+		<isFighter>false</isFighter>
+		<itemQuality>Good</itemQuality>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="NH_HivekindFactionLeader">
+		<defName>NH_Hivekind_FactionLeaderOne</defName>
+	</PawnKindDef>
+
+</Defs>

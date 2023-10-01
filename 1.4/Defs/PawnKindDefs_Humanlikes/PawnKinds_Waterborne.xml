@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<PawnKindDef Name="NH_WaterbornePawnKindBase" Abstract="True">
+		<race>NH_Waterborne</race>
+		<chemicalAddictionChance>0.05</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+	</PawnKindDef>
+
+	<PawnKindDef Name="NH_WaterborneCivilianKindBase" ParentName="NH_WaterbornePawnKindBase" Abstract="True">
+		<combatPower>45</combatPower>
+		<isFighter>false</isFighter>
+		<initialWillRange>0~1</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="NH_WaterborneCombatKindBase" ParentName="NH_WaterbornePawnKindBase" Abstract="True">
+		<combatPower>60</combatPower>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCivilianKindBase">
+		<defName>NH_Waterborne_CivilianOne</defName>
+		<label>Waterborne civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCivilianKindBase">
+		<defName>NH_Waterborne_CivilianTwo</defName>
+		<label>Waterborne civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCivilianKindBase">
+		<defName>NH_Waterborne_CivilianThree</defName>
+		<label>Waterborne civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCivilianKindBase">
+		<defName>NH_Waterborne_CivilianFour</defName>
+		<label>Waterborne civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCivilianKindBase">
+		<defName>NH_Waterborne_CivilianFive</defName>
+		<label>Waterborne civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCivilianKindBase">
+		<defName>NH_Waterborne_CivilianSix</defName>
+		<label>Waterborne civilian</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCombatKindBase">
+		<defName>NH_Waterborne_SoldierOne</defName>
+		<label>Waterborne soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCombatKindBase">
+		<defName>NH_Waterborne_SoldierTwo</defName>
+		<label>Waterborne soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCombatKindBase">
+		<defName>NH_Waterborne_SoldierThree</defName>
+		<label>Waterborne soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCombatKindBase">
+		<defName>NH_Waterborne_SoldierFour</defName>
+		<label>Waterborne soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCombatKindBase">
+		<defName>NH_Waterborne_SoldierFive</defName>
+		<label>Waterborne soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterborneCombatKindBase">
+		<defName>NH_Waterborne_SoldierSix</defName>
+		<label>Waterborne soldier</label>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="NH_WaterbornePawnKindBase">
+		<defName>NH_Waterborne_TraderOne</defName>
+		<label>town trader</label>
+		<trader>true</trader>
+		<combatPower>45</combatPower>
+		<isFighter>false</isFighter>
+		<itemQuality>Normal</itemQuality>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>12~20</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="NH_WaterborneFactionLeader" ParentName="NH_WaterbornePawnKindBase" Abstract="True">
+		<label>Waterborne leader</label>
+		<labelPlural>Waterborne leaders</labelPlural>
+		<combatPower>40</combatPower>
+		<factionLeader>true</factionLeader>
+		<minGenerationAge>30</minGenerationAge>
+		<isFighter>false</isFighter>
+		<itemQuality>Good</itemQuality>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="NH_WaterborneFactionLeader">
+		<defName>NH_Waterborne_FactionLeaderOne</defName>
+	</PawnKindDef>
+
+</Defs>

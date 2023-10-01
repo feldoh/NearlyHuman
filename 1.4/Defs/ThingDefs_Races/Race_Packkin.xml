@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+        <defName>NH_Packkin</defName>
+        <label>packkin</label>
+        <alienRace>
+            <generalSettings>
+                <alienPartGenerator>
+                    <headTypes Inherit="False">
+                        <li>NH_Packkin_Male_Average</li>
+                        <li>NH_Packkin_Female_Average</li>
+                    </headTypes>
+                    <bodyTypes Inherit="False">
+                        <li>Female</li>
+                        <li>Hulk</li>
+                    </bodyTypes>
+                    <colorChannels Inherit="False">
+                        <li>
+                            <name>skin</name>
+                            <first Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>10</weight>
+                                        <only>RGBA(38, 38, 38,255)</only>
+                                    </li>
+                                    <li>
+                                        <weight>10</weight>
+                                        <only>RGBA(51, 51, 51, 255)</only>
+                                    </li>
+                                    <li>
+                                        <weight>3</weight>
+                                        <only>RGBA(89, 89, 89, 255)</only>
+                                    </li>
+                                    <li>
+                                        <weight>3</weight>
+                                        <only>RGBA(115, 115, 115, 255)</only>
+                                    </li>
+                                </options>
+                            </first>
+                            <second Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>10</weight>
+                                        <only>RGBA(255, 255, 255, 255)</only>
+                                    </li>
+                                </options>
+                            </second>
+                        </li>
+                    </colorChannels>
+                </alienPartGenerator>
+            </generalSettings>
+            <styleSettings>
+                <li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>true</hasStyle>
+                        <styleTagsOverride>
+                            <li>NH_Packkin</li>
+                        </styleTagsOverride>
+                    </value>
+                </li>
+                <li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+            <graphicPaths Inherit="False">
+                <head>
+                    <path>Packkin/Head/</path>
+                </head>
+                <body>
+                    <path>Packkin/Body/</path>
+                </body>
+            </graphicPaths>
+            <raceRestriction>
+                <blackEndoCategories>
+                    <li>BodyType</li>
+                    <li>Jaw</li>
+                </blackEndoCategories>
+                <blackGeneList>
+                    <li>Furskin</li>
+                </blackGeneList>
+            </raceRestriction>
+        </alienRace>
+        <race>
+            <baseHealthScale>1.1</baseHealthScale>
+            <bloodDef>NH_Packkin_Filth_Blood</bloodDef>
+            <fleshType>NH_Packkin</fleshType>
+        </race>
+        <tools Inherit="False">
+            <li>
+                <label>left fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10.25</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>14</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+            </li>
+            <li>
+                <label>right fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10.25</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>14</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+            </li>
+            <li>
+                <label>teeth</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>10.25</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>0.07</chanceFactor>
+                <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+                <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6.25</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+    </AlienRace.ThingDef_AlienRace>
+</Defs>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <RulePackDef>
+    <defName>NH_NamerFactionWaterborneCivil</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Waterborne Civil</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NH_NamerFactionWaterborneHostile</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Waterborne Hostile</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NH_NamerFactionWaterborneSettlement</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Settlement</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+
+</Defs>

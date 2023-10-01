@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+        <defName>NH_Stargazer</defName>
+        <label>stargazer</label>
+        <alienRace>
+            <generalSettings>
+                <alienPartGenerator>
+                    <headTypes Inherit="False">
+                        <li>NH_Stargazer_HeadAlienE1_Male</li>
+                        <li>NH_Stargazer_HeadAlienE2_Male</li>
+                        <li>NH_Stargazer_HeadAlienE1_Female</li>
+                        <li>NH_Stargazer_HeadAlienE2_Female</li>
+                    </headTypes>
+                    <bodyTypes Inherit="False">
+                        <li>Female</li>
+                        <li>Male</li>
+                    </bodyTypes>
+                    <colorChannels Inherit="False">
+                        <li>
+                            <name>skin</name>
+                            <first Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>10</weight>
+                                        <only>RGBA(210, 22, 22, 255)</only>
+                                    </li>
+                                </options>
+                            </first>
+                            <second Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>3</weight>
+                                        <only>RGBA(115, 115, 115, 255)</only>
+                                    </li>
+                                </options>
+                            </second>
+                        </li>
+                    </colorChannels>
+                </alienPartGenerator>
+            </generalSettings>
+            <styleSettings>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+            <graphicPaths Inherit="False">
+                <head>
+                    <path>Stargazer/Head/</path>
+                </head>
+                <body>
+                    <path>Stargazer/Body/</path>
+                </body>
+            </graphicPaths>
+            <raceRestriction>
+                <blackEndoCategories>
+                    <li>BodyType</li>
+                    <li>Jaw</li>
+                </blackEndoCategories>
+                <blackGeneList>
+                    <li>Furskin</li>
+                </blackGeneList>
+            </raceRestriction>
+        </alienRace>
+        <race>
+            <bloodDef>NH_Stargazer_Filth_Blood</bloodDef>
+            <fleshType>NH_Stargazer</fleshType>
+        </race>
+    </AlienRace.ThingDef_AlienRace>
+</Defs>
